@@ -1,0 +1,44 @@
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://s1.1zoom.me/b5050/342/Geometry_Texture_Blue_Light_Blue_White_background_586221_3840x2400.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.login-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Ajustar el ancho máximo */
+    width: 100%;
+    border: none;
+    height: 500px;
+}
+.login-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.login-container .form-group {
+    position: relative;
+}
+
+.login-container .form-group .form-control-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+.login-container .form-check {
+    display: flex;
+    justify-content: space-between;
+}
+.login-container .btn-primary {
+    width: 100%;
+}

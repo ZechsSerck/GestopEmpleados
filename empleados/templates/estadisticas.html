@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Estadísticas Generales</title>
+    <link type="text/css" href="{% static 'css/informes.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Informe de Estadísticas Generales</h1>
+            <div class="correo">
+                <p>el correo de yury</p>
+            </div>
+        </div>
+
+
+        <h3>Empleados por Área</h3>
+        <ul>
+            {% for area in empleados_por_area %}
+            <li>
+                <span class="area">Área: {{ area.area_id__nombre_sucursal }}</span>
+                <br>
+                <span class="total">Total Empleados: {{ area.total_empleados }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h3>Salario Total por Departamento</h3>
+        <ul>
+            {% for departamento in salario_por_departamento %}
+            <li>
+                <span class="area">Departamento: {{ departamento.departamento_id__nombre_departamento }}</span>
+                <br>
+                <span class="total">Salario Total: {{ departamento.total_salario }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h3>Empleados por Cargo</h3>
+        <ul>
+            {% for cargo in empleados_por_cargo %}
+            <li>
+                <span class="area">Cargo: {{ cargo.cargo_id__nombre_cargo }}</span>
+                <br>
+                <span class="total">Total Empleados: {{ cargo.total_empleados }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h3>Salario Promedio por Cargo</h3>
+        <ul>
+            {% for cargo in salario_promedio_por_cargo %}
+            <li>
+                <span class="area">Cargo: {{ cargo.cargo_id__nombre_cargo }}</span>
+                <br>
+                <span class="total">Salario Promedio: {{ cargo.salario_promedio }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>
